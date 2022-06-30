@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ChartData from "./Charts/ChartData";
+import DemoMixPro from "./Charts/ChartData3";
+import DemoLine from "./Charts/ChartData_two";
 
 import "./Dashboard.scss";
 
@@ -117,10 +119,47 @@ function Dashboard() {
                 </div>
               </div>
             </div>
+          </div>{" "}
+          <div className="col-lg-4 col-md-6 mt-4 mb-4">
+            <div className="card z-index-2">
+              <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                <div className="bg-gradient-success shadow-primary border-radius-lg py-3 pe-1">
+                  <DemoMixPro />
+                </div>
+              </div>
+              <div className="card-body">
+                <h6 className="mb-0">Daily Sales</h6>
+                <p className="text-sm ">(+15%) increase in today sales.</p>
+                <div className="d-flex">
+                  <i className="material-icons text-sm my-auto me-1">
+                    {" "}
+                    schedule
+                  </i>
+                  <p className=""> updated 4 min ago</p>
+                </div>
+              </div>
+            </div>
+          </div>{" "}
+          <div className="col-lg-4 col-md-6 mt-4 mb-4">
+            <div className="card z-index-2">
+              <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                <div className="bg-gradient-dark shadow-primary border-radius-lg py-3 pe-1">
+                  <DemoLine />
+                </div>
+              </div>
+              <div className="card-body">
+                <h6 className="mb-0">Completed Tasks</h6>
+                <p className="text-sm ">Last Campaign Performance.</p>
+                <div className="d-flex">
+                  <i className="material-icons text-sm my-auto me-1">
+                    {" "}
+                    schedule
+                  </i>
+                  <p className=""> just updated</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-lg-4 col-md-6 mt-4 mb-4"></div>
-          <div className="col-lg-4 col-md-6 mt-4 mb-4"></div>
-          <div className="col-lg-4 mt-4 mb-3"></div>
         </div>
       </div>
     </div>

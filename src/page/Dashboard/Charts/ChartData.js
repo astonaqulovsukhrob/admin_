@@ -4,40 +4,40 @@ import React from "react";
 const ChartData = () => {
   const data = [
     {
-      type: "1-3秒",
-      value: 0.16,
+      type: "M",
+      value: 0.5,
     },
     {
-      type: "4-10秒",
-      value: 0.125,
+      type: "Sales",
+      value: 0.2,
     },
     {
-      type: "11-30秒",
-      value: 0.24,
+      type: "Qancha sotib olingan",
+      value: 0.1,
     },
     {
-      type: "31-60秒",
+      type: "Qancha Sotilganligi",
       value: 0.19,
     },
     {
-      type: "1-3分",
+      type: "Product",
       value: 0.22,
     },
     {
-      type: "3-10分",
-      value: 0.05,
+      type: "Nechta qolgan",
+      value: 0.5,
     },
     {
-      type: "10-30分",
-      value: 0.01,
+      type: "Kimga qo`yilgan",
+      value: 0.1,
     },
     {
-      type: "30+分",
-      value: 0.015,
+      type: "Yana bir narslarda hullas",
+      value: 0.4,
     },
   ];
-  const paletteSemanticRed = "#F4664A";
-  const brandColor = "#5B8FF9";
+  const paletteSemanticRed = "#fff";
+  const brandColor = "#fff";
   const config = {
     data,
     xField: "type",
