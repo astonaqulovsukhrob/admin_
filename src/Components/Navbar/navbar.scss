@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+    margin-left: 200px;
     .site-header {
       display: flex;
       .site-header_link {
@@ -12,8 +13,8 @@
             display: inline-block;
             margin-left: 10px;
             span {
-              padding: .2rem;
-              font-size: .9rem;
+              padding: 0.2rem;
+              font-size: 0.9rem;
             }
           }
         }
