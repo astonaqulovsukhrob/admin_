@@ -1,0 +1,23 @@
+.header {
+  .site-header_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    .site-header {
+      display: flex;
+      .site-header_link {
+        ul {
+          list-style: none;
+          li {
+            display: inline-block;
+            margin-left: 10px;
+            span {
+              padding: .2rem;
+              font-size: .9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
