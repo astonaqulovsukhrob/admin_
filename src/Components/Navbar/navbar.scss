@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    margin-left: 200px;
+    margin-left: 230px;
     .site-header_page {
       span {
         font-size: 0.9rem;
@@ -34,6 +34,20 @@
             }
           }
         }
+      }
+    }
+  }
+  .site-navbar_left {
+    background: #38383e;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    bottom: 20px;
+    width: 210px;
+    border-radius: 10px;
+    .site-navbar_logo {
+      img {
+        width: 90%;
       }
     }
   }

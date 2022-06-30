@@ -24,11 +24,13 @@ body {
   background: var(--background);
 }
 
-// @mixin df($j) {
-//   display: flex;
-//   justify-content: $j;
-//   align-items: center;
-// }
+.container {
+  width: calc(100% - 280px);
+  margin-left: 245px;
+  margin-top: -30px;
+  background: #fff;
+  height: 85vh;
+}
 
 /* ------------------------------- Modal_style ------------------------------ */
 .ant-modal-mask {
