@@ -1,0 +1,21 @@
+.action {
+  .edit {
+    color: rgb(50, 241, 66);
+    cursor: pointer;
+    svg {
+      path {
+        fill: rgb(50, 241, 66);
+      }
+    }
+  }
+  .delete {
+    color: red;
+    margin-left: 10px;
+    cursor: pointer;
+    svg {
+      path {
+        fill: red;
+      }
+    }
+  }
+}

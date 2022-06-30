@@ -2,22 +2,105 @@
   .site-header_top {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
+    margin-left: 230px;
+    .site-header_page {
+      span {
+        font-size: 0.9rem;
+        span {
+          color: #7b809a;
+        }
+      }
+    }
     .site-header {
       display: flex;
       .site-header_link {
         ul {
           list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           li {
             display: inline-block;
             margin-left: 10px;
-            span {
-              padding: .2rem;
-              font-size: .9rem;
+            a {
+              color: #7b809a;
+              span {
+                padding: 0.2rem;
+                font-size: 1rem;
+              }
+              svg {
+                path {
+                  fill: #7b809a;
+                }
+              }
             }
           }
         }
+        .bars {
+          display: none;
+        }
       }
     }
+  }
+  .active {
+    transform: translateX(0%) !important;
+    z-index: 1;
+  }
+  .site-navbar_left {
+    background: #38383e;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    bottom: 20px;
+    width: 210px;
+    border-radius: 10px;
+
+    .site-navbar_logo {
+      padding: 1rem;
+      img {
+        width: 90%;
+      }
+
+      .site-close {
+        display: none;
+      }
+    }
+    .site-navbar_link {
+      a {
+        display: block;
+        margin: 10px 10px;
+        color: #fff;
+        border-radius: 8px;
+        padding: 0.5rem;
+      }
+      .active_link {
+        background: #E63572;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    .site-header_top {
+      margin-left: 0;
+    }
+    .site-navbar_left {
+      transform: translateX(-150%);
+      transition: 0.3s;
+      z-index: 1;
+      .site-navbar_logo {
+        .site-close {
+          display: block;
+          position: absolute;
+          top: 20px;
+          right: 8px;
+        }
+      }
+    }
+  }
+  .bars {
+    display: block !important;
   }
 }
