@@ -5,9 +5,8 @@ import "./table.scss";
 import { setIsOpenModal } from "../../redux/currentPageReducer";
 
 function GlobalTable() {
-  const { currentPage, loading, values, value, rowId, allData } = useSelector(
-    (s) => s?.current_Page_Reducer
-  );
+  const { currentPage, values } = useSelector((s) => s?.current_Page_Reducer);
+
   const dispatch = useDispatch();
 
   const onClickRow = (record) => {
@@ -20,13 +19,14 @@ function GlobalTable() {
   };
 
   const setRowClassName = (record) => {
-    return record?.id === rowId ? "blue" : "";
+    // return record?.id === rowId ? "blue" : "";
   };
 
   return (
     <div className="site_table">
       <Table
         columns={currentPage?.columns}
+        dataSource={values}
         // loading={loading}
         className="main-table"
         onRow={onClickRow}
@@ -37,7 +37,6 @@ function GlobalTable() {
         pagination={{
           position: ["bottomCenter"],
           showSizeChanger: true,
-          // defaultPageSize: 13,
           pageSizeOptions: ["10", "20", "30"],
         }}
       />

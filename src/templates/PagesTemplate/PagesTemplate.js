@@ -1,13 +1,13 @@
 import { Space } from "antd";
-import { NUMBER, STRING } from "../../Components/constant/inputTypes";
+import { STRING } from "../../Components/constant/inputTypes";
 import { CALCULATE_PAGE } from "../../Components/constant/pageConstant";
-import { CALCULATE_PATH } from "../../Components/constant/pagePath";
+import { PAGES_PATH } from "../../Components/constant/pagePath";
 import ActionTable from "../../Components/GlobalTable/ActionTable/ActionTable";
 
-export const CalculateTemplate = {
-  text: "Calculate",
+export const PagesTemplate = {
+  text: "Pages",
   icon: "",
-  path: CALCULATE_PATH,
+  path: PAGES_PATH,
   type: CALCULATE_PAGE,
   isOpenModal: false,
   optionName: "/",
@@ -30,16 +30,16 @@ export const CalculateTemplate = {
         },
         {
           type: STRING,
-          name: "width",
-          placeholder: "Width Sum",
+          name: "Name",
+          placeholder: "Name",
           gridColumn: "6 / 8",
         },
         {
           type: STRING,
-          name: "sum",
-          placeholder: "Height Sum",
+          name: "new",
+          placeholder: "New Page",
           gridColumn: "1 / 8",
-          gridRow: '2 / 2'
+          gridRow: "2 / 2",
         },
       ],
     },
@@ -51,13 +51,13 @@ export const CalculateTemplate = {
       width: "40px",
     },
     {
-      title: "Width Sum",
-      dataIndex: "width",
+      title: "Name",
+      dataIndex: "Name",
       width: "200px",
     },
     {
-      title: "Height Sum",
-      dataIndex: "sum",
+      title: "New Page",
+      dataIndex: "new",
       width: "350px",
     },
     {

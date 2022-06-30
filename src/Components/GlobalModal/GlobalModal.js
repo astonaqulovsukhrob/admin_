@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Modal } from "antd";
+import { Button, Modal } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import Form from "../Form/Form";
-import ModalButton from "./ModalButton";
 import { CloseIcon } from "../../assates/icon/icon";
 import "./modalStyle/modalStyle.scss";
 import { setIsOpenModal } from "../../redux/currentPageReducer";
@@ -13,7 +12,9 @@ function GlobalModal() {
 
   return (
     <>
-      <ModalButton />
+      <Button type="primary" onClick={() => dispatch(setIsOpenModal(true))}>
+        Qushish
+      </Button>
       <Modal
         title={
           <div className="modal_header">

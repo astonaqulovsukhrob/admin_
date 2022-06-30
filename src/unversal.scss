@@ -4,6 +4,8 @@
 
 :root {
   --background: #f0f2f5 !important;
+  --main-border-color: #4d50dd;
+  --main-button-background: #4d50dd;
 }
 
 ::-webkit-scrollbar {
@@ -21,18 +23,28 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: var(--background);
+  background: #f0f2f5 !important;
 }
 
 .container {
   width: calc(100% - 280px);
   margin-left: 245px;
-  margin-top: -30px;
-  background: #fff;
+  margin-top: -10px;
+  // background: #fff;
   height: 85vh;
 }
 
 /* ------------------------------- Modal_style ------------------------------ */
 .ant-modal-mask {
   backdrop-filter: blur(4px);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: calc(100%);
+    margin-left: 15px;
+    margin-top: -10px;
+    // background: #fff;
+    height: 85vh;
+  }
 }

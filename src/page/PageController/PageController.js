@@ -11,13 +11,13 @@ export default ({ page }) => {
     case DASHBOARD_PAGE:
       return (
         <Suspense fallback="">
-          <Dashboard />
+          <Dashboard page={page}/>
         </Suspense>
       );
     case CALCULATE_PAGE:
       return (
         <Suspense fallback="">
-          <Calculate />
+          <Calculate page={page} />
         </Suspense>
       );
     default:
