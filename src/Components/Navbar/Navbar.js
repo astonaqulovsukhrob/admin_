@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Input } from "antd";
-import { Bell_Icon, Gear_Icon, User_logo } from "../../assates/icon/icon";
-import logo from "../../assates/images/ОКНОПРОФИ.png";
+import { Bell_Icon, Gear_Icon, User_logo } from "../../assets/icon/icon";
+import logo from "../../assets/images/ОКНОПРОФИ.png";
 import { AllPage } from "../grouping/grouping";
 import "../inputStyle/input.scss";
 import "./navbar.scss";

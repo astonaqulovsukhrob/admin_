@@ -3,7 +3,7 @@ import { Modal } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import Form from "../Form/Form";
 import ModalButton from "./ModalButton";
-import { CloseIcon } from "../../assates/icon/icon";
+import { CloseIcon } from "../../assets/icon/icon";
 import "./modalStyle/modalStyle.scss";
 import { setIsOpenModal } from "../../redux/currentPageReducer";
 
