@@ -1,9 +1,114 @@
-import React from "react";
+import React, { useState } from "react";
+import ChartData from "./Charts/ChartData";
 
-function Dashboard({ page }) {
+import "./Dashboard.scss";
+
+function Dashboard() {
+ 
   return (
-    <div className="container">
-    <h3>{page?.text}</h3>
+    <div className="container-fluid py-4">
+      <div className="row dashboard">
+        <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div className="card">
+            <div className="card-header p-3 pt-2">
+              <div className="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                <i className="material-icons opacity-10">weekend</i>
+              </div>
+              <div className="text-end pt-1">
+                <p className="text-sm mb-0 text-capitalize">Today's Money</p>
+                <h4 className="mb-0">$53k</h4>
+              </div>
+            </div>
+            <hr className="dark horizontal my-0" />
+            <div className="card-footer p-3">
+              <p className="mb-0">
+                <span className="text-success text-sm font-weight-bolder">
+                  +55%
+                </span>
+                than last week
+              </p>
+            </div>
+          </div>
+        </div>{" "}
+        <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div className="card">
+            <div className="card-header p-3 pt-2">
+              <div className="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                <i className="material-icons opacity-10">person</i>
+              </div>
+              <div className="text-end pt-1">
+                <p className="text-sm mb-0 text-capitalize">Today's Users</p>
+                <h4 className="mb-0">2,300</h4>
+              </div>
+            </div>
+            <hr className="dark horizontal my-0" />
+            <div className="card-footer p-3">
+              <p className="mb-0">
+                <span className="text-success text-sm font-weight-bolder">
+                  +3%
+                </span>
+                than last month
+              </p>
+            </div>
+          </div>
+        </div>{" "}
+        <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div className="card">
+            <div className="card-header p-3 pt-2">
+              <div className="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                <i className="material-icons opacity-10">person</i>
+              </div>
+              <div className="text-end pt-1">
+                <p className="text-sm mb-0 text-capitalize">New Clients</p>
+                <h4 className="mb-0">3,462</h4>
+              </div>
+            </div>
+            <hr className="dark horizontal my-0" />
+            <div className="card-footer p-3">
+              <p className="mb-0">
+                <span className="text-success text-sm font-weight-bolder">
+                  -2%
+                </span>
+                than yesterday
+              </p>
+            </div>
+          </div>
+        </div>{" "}
+        <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div className="card">
+            <div className="card-header p-3 pt-2">
+              <div className="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
+                <i className="material-icons opacity-10">weekend</i>
+              </div>
+              <div className="text-end pt-1">
+                <p className="text-sm mb-0 text-capitalize">Sales</p>
+                <h4 className="mb-0">$$103,430</h4>
+              </div>
+            </div>
+            <hr className="dark horizontal my-0" />
+            <div className="card-footer p-3">
+              <p className="mb-0">
+                <span className="text-success text-sm font-weight-bolder">
+                  +5%
+                </span>
+                than yesterday
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="dashboard-charts">
+        <div className="row">
+          <div className="col-lg-4 col-md-6 mt-4 mb-4">
+            <div className="card z-index-2" style={{width: 300}}>
+             <ChartData/>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 mt-4 mb-4"></div>
+          <div className="col-lg-4 col-md-6 mt-4 mb-4"></div>
+          <div className="col-lg-4 mt-4 mb-3"></div>
+        </div>
+      </div>
     </div>
   );
 }

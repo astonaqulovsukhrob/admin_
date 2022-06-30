@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Delete_Icon, Edit_Icon } from "../../../assates/icon/icon";
 import {
   setDelete,
+  setEdit,
   setIsOpenModal,
   setValue,
 } from "../../../redux/currentPageReducer";
@@ -14,6 +15,7 @@ function ActionTable({ record }) {
   const handleEdit = () => {
     dispatch(setIsOpenModal(true));
     dispatch(setValue({ ...record }));
+    dispatch(setEdit({ ...record }));
   };
 
   const hanldeDelete = () => {

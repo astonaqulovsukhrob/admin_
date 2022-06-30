@@ -21,9 +21,13 @@ export const currentPageReducer = createSlice({
     setActive: (state, { payload }) => {
       state.active = payload;
     },
+    setEdit: (state, { payload }) => {
+      let is_edit = state?.values.find((list) => list.id === payload?.id);
+      state.values = is_edit;
+    },
     setDelete: (state, { payload }) => {
-      let data = state.values.filter((list) => list.id !== payload?.id);
-      state.values = data;
+      let is_delete = state.values.filter((list) => list.id !== payload?.id);
+      state.values = is_delete;
     },
     setIsOpenModal: (state, { payload }) => {
       state.currentPage.isOpenModal = payload;
@@ -36,6 +40,7 @@ export const {
   setValue,
   setValues,
   setActive,
+  setEdit,
   setDelete,
   setIsOpenModal,
 } = currentPageReducer.actions;
