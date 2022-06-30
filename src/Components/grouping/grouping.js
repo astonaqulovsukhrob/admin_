@@ -1,3 +1,4 @@
-import { CategoriyaTemplate } from "../../templates/CategoriyaTemplate/CategoriyaTemplate";
+import { CalculateTemplate } from "../../templates/CalculateTemplate/CalculateTemplate";
+import { DashboardTemplate } from "../../templates/DashboardTemplate/DashboardTamplate";
 
-export const AllPage = [CategoriyaTemplate];
+export const AllPage = [DashboardTemplate, CalculateTemplate];

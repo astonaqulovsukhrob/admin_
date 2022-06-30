@@ -5,8 +5,9 @@ import GlobalTable from "../../Components/GlobalTable/GlobalTable";
 function Calculate() {
   return (
     <>
-      <GlobalModal />
-      <GlobalTable />
+      Calculate
+      {/* <GlobalModal />
+      <GlobalTable /> */}
     </>
   );
 }

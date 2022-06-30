@@ -1,7 +1,9 @@
-import { Input } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
+import { Input } from "antd";
 import { Bell_Icon, Gear_Icon, User_logo } from "../../assates/icon/icon";
 import logo from "../../assates/images/ОКНОПРОФИ.png";
+import { AllPage } from "../grouping/grouping";
 import "../inputStyle/input.scss";
 import "./navbar.scss";
 
@@ -39,6 +41,16 @@ function Navbar() {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div className="site-navbar_left">
+        <div className="site-navbar_logo">
+          <img src={logo} alt="" />
+        </div>
+        <div>
+          {AllPage?.map((page) => {
+            return <Link to={page?.path}>{page?.text}</Link>;
+          })}
         </div>
       </div>
     </div>

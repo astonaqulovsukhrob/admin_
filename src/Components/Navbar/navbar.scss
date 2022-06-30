@@ -2,8 +2,16 @@
   .site-header_top {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
     margin-left: 200px;
+    .site-header_page {
+      span {
+        font-size: 0.9rem;
+        span {
+          color: #7b809a;
+        }
+      }
+    }
     .site-header {
       display: flex;
       .site-header_link {
@@ -12,9 +20,17 @@
           li {
             display: inline-block;
             margin-left: 10px;
-            span {
-              padding: 0.2rem;
-              font-size: 0.9rem;
+            a {
+              color: #7b809a;
+              span {
+                padding: 0.2rem;
+                font-size: 1rem;
+              }
+              svg {
+                path {
+                  fill: #7b809a;
+                }
+              }
             }
           }
         }
