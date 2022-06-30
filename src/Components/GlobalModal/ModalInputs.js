@@ -1,32 +1,24 @@
 import { Input, Select } from "antd";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NUMBER, STRING, SELECT } from "../constant/inputTypes";
+import { setValue } from "../../redux/currentPageReducer";
+import { STRING } from "../constant/inputTypes";
 import "../inputStyle/input.scss";
 const { Option } = Select;
 
 const ModalInputs = (props) => {
-  const {
-    placeholder,
-    name,
-    gridRow,
-    gridColumn,
-    type,
-    maxWidth,
-    width,
-    tartib,
-  } = props;
+  const { placeholder, name, gridRow, gridColumn, type, maxWidth, width } =
+    props;
   let label = placeholder;
   let input = null;
-  // const { currentPage, value, values } = useSelector(
-  //   (s) => s?.unsaved__reducer
-  // );
+  const { value } = useSelector((s) => s?.current_Page_Reducer);
   const [focusInput, setFocusInput] = useState();
-  // !!value[name] || (!!values?.users && !!values?.users[name])
 
   const dispatch = useDispatch();
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    dispatch(setValue({ ...value, ...e }));
+  };
 
   const defaultStyle = {
     gridColumn,
@@ -39,6 +31,7 @@ const ModalInputs = (props) => {
       input = (
         <div style={defaultStyle}>
           <Input
+            value={value[name]}
             name={name}
             placeholder={placeholder}
             type="text"
@@ -53,53 +46,6 @@ const ModalInputs = (props) => {
         </div>
       );
       break;
-    case SELECT:
-      input = (
-        <div style={defaultStyle}>
-          <Select
-            name={name}
-            style={{
-              width: width,
-              maxWidth: maxWidth,
-            }}
-            onBlur={() => setFocusInput("")}
-            onFocus={() => setFocusInput(true)}
-            placeholder={placeholder}
-            onChange={(e) => {
-              let target = { [name]: e };
-              // dispatch(setValue({ ...target }));
-            }}
-          >
-            <Option value="jack">Jack </Option>
-            <Option value="lucy">Lucy </Option>
-          </Select>
-          <label
-            className={
-              focusInput ? "special_label_for_input_number " : "special_label"
-            }
-          >
-            {placeholder}
-          </label>
-        </div>
-      );
-      break;
-    case NUMBER:
-      input = (
-        <div style={defaultStyle}>
-          <Input
-            name={name}
-            type={"number"}
-            placeholder={placeholder}
-            onFocus={() => setFocusInput(true)}
-            onChange={(e) =>
-              handleChange({
-                [e.target.name]: e.target.value,
-              })
-            }
-          />
-          <label className={"special_label"}>{label && label}</label>
-        </div>
-      );
     default:
       break;
   }

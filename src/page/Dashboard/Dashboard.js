@@ -4,7 +4,6 @@ import ChartData from "./Charts/ChartData";
 import "./Dashboard.scss";
 
 function Dashboard() {
- 
   return (
     <div className="container-fluid py-4">
       <div className="row dashboard">
@@ -100,8 +99,23 @@ function Dashboard() {
       <div className="dashboard-charts">
         <div className="row">
           <div className="col-lg-4 col-md-6 mt-4 mb-4">
-            <div className="card z-index-2" style={{width: 300}}>
-             <ChartData/>
+            <div className="card z-index-2">
+              <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                <div className="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                  <ChartData />
+                </div>
+              </div>
+              <div className="card-body">
+                <h6 className="mb-0">Website Views</h6>
+                <p className="text-sm ">Last Campaign Performance</p>
+                <div className="d-flex">
+                  <i className="material-icons text-sm my-auto me-1">
+                    {" "}
+                    schedule
+                  </i>
+                  <p className=""> campaign sent 2 days ago </p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 mt-4 mb-4"></div>
